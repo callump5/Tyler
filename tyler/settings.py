@@ -25,7 +25,9 @@ SECRET_KEY = '945x+5bseonxf4d*n90p23g8+n6!e=)1%46i90pn=88jnr#=7e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'tidy-building.herokuapp.com'
+]
 
 
 # Application definition
