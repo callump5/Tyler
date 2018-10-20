@@ -1,0 +1,1 @@
+web: gunicorn tyler.wsgi :app

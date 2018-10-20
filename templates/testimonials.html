@@ -1,0 +1,19 @@
+<h1 class="page-title">Testimonials</h1>
+
+<div class="container">
+{% for testimonial in testimonials %}
+
+    <div class="testimonial">
+        <div class="testi-text">
+            <img src="{{ testimonial.logo.url }}">
+            {% if testimonial.client %}
+                <h1>{{ testimonial.client }}</h1>
+            {% endif %}
+            <h2>{{ testimonial.name }}</h2>
+            <p>{{ testimonial.title }}</p>
+        </div>
+        <p>{{ testimonial.testimonial }}</p>
+    </div>
+
+{% endfor %}
+</div>
