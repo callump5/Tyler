@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,8 @@ SECRET_KEY = '945x+5bseonxf4d*n90p23g8+n6!e=)1%46i90pn=88jnr#=7e'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'tidy-building.herokuapp.com'
+    'tidy-building.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
@@ -39,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tyler_site'
+    'tyler_site',
+    'django_forms_bootstrap'
 ]
 
 MIDDLEWARE = [
@@ -129,7 +132,19 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') ##specify static root
 
 
+#Media files
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = '/media/'
 
+
+#Django Messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}

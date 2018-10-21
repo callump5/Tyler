@@ -11,7 +11,7 @@
 
      */
 
-h1, h2, p, a {
+h1, h2, p, a, label, input, .alert, option, select {
     font-family: 'Niramit', sans-serif;
     font-size: 1.5em;
     color: #4e555b;
@@ -47,10 +47,7 @@ nav .container {
 
 .links{
 
-    justify-content: unset;
-}
-.links li a {
-    margin-right: 45px;
+    justify-content: space-between;
 }
 .nav-body {
     display: flex;
@@ -73,6 +70,7 @@ nav .container {
     margin: 10px 0;
 }
 
+
 #landing {
     width: 100%;
     background-image: url("/static/pexels-photo-164005.jpeg");
@@ -86,6 +84,7 @@ nav .container {
     background-color: transparent;
     color: white;
     border-radius: 0;
+
 
     display: flex;
     justify-content: center;
@@ -143,7 +142,6 @@ nav .container {
 
 .service-card {
     width: 300px;
-    margin-bottom: 50px;
 }
 .service-card h2, .service-card, p {
     color: #4e555b;
@@ -170,20 +168,22 @@ nav .container {
     align-items: flex-start;
 }
 
-#services{
-    height: 100%;
-
+.background-gray{
     background-color: rgba(210, 210, 210, 0.51);
 }
 
-footer {
-    display: none;
+.page {
+    padding-bottom: 50px;
 }
-
 .testimonial {
     display: flex;
     flex-direction: row;
-    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+div.testimonial:last-child{
+    margin-bottom: 0;
 }
 
 .testimonial img {
@@ -194,4 +194,51 @@ footer {
     font-size: 12px;
     margin-right: 50px;
     text-align: justify;
+}
+
+.ui-datepicker-trigger {
+    position: absolute;
+    right: 24px;
+    top: 48%;
+    height: 20px;
+    width: auto;
+}
+
+#callform-submit {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 10px 25px;
+    background-color: #386fa4;
+    border: none;
+    color: white;
+}
+
+#call-form label {
+    margin-bottom: 5px;
+}
+
+
+.credits {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.5em;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+footer {
+    padding: 20px;
+}
+
+#messages {
+    margin-top: 15px;
+}
+#messages .alert {
+    margin: 0;
+}
+
+#call-form .alert {
+    margin-bottom: 15px;
 }
