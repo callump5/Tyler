@@ -519,6 +519,18 @@ body {
     .service-page-card:nth-child(2n) p, .service-page-card:nth-child(2n) h1  {
         color: white;
     }
+
+    .service-imgs img:hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-direction: alternate;
+        height: 400px;
+        width: auto;
+        border: 10px solid white;
+        cursor: pointer;
+        z-index: 100;
+    }
 }
 
 @media screen and (min-width: 1500px) {
