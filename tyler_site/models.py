@@ -11,8 +11,11 @@ from datetime import time
 
 class Service(models.Model):
     name = models.CharField(max_length=300)
-    description = models.TextField()
-    image = models.ImageField(upload_to='images')
+    description = models.TextField(max_length=300)
+    image_1 = models.ImageField(upload_to='images')
+    image_2 = models.ImageField(upload_to='images', help_text='Not required', null=True, blank=True)
+    image_3 = models.ImageField(upload_to='images', help_text='Not required', null=True, blank=True)
+
 
     def __unicode__(self):
         return self.name

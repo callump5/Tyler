@@ -1,3 +1,39 @@
-<h1 class="page-title">
-    hoihoi
-</h1>
+
+<div class="service-page-card background-gray">
+    <div class="service-imgs">
+        <img src="{{ service.image_1.url }}"
+
+             {% if service.image_2 and service.image_3 %}
+                class="sc-img-4"
+             {% elif service.image_2 %}
+                class="sc-img-2"
+             {% else %}
+                class="sc-img-1"
+             {% endif %}
+        >
+
+        {% if service.image_2  %}
+            <img src="{{ service.image_2.url }}"
+                {% if service.image_3 %}
+                     class="sc-img-3"
+                {% else %}
+                     class="sc-img-2"
+                {% endif %}
+            >
+        {% endif %}
+
+
+        {% if service.image_3 %}
+            <img class="sc-img-3" src="{{ service.image_3.url }}">
+        {% endif %}
+
+    </div>
+
+    <div class="service-text">
+        <h1>{{ service }}</h1>
+        <p>{{ service.description}}</p>
+    </div>
+</div>
+
+
+
