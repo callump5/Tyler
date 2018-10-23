@@ -32,7 +32,16 @@
             $(this).find('a').css('color', 'white');
 
         }).mouseout(function () {
-            $(this).find('a').css('color', 'unset');
+
+            var active = $(this).attr('class');
+            console.log(active);
+            if (active == 'active'){
+                $(this).find('a').css('color', 'white');
+            } else {
+                $(this).find('a').css('color', '#6e6e6e');
+            }
+
+
         });
 
         $('#nav-links .my-nav-flex').on('click', function () {
