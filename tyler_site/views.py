@@ -15,7 +15,7 @@ from .forms import CallForm
 
 # Home View
 def get_base(request):
-    services = Service.objects.all()
+    services = Service.objects.all()[:3]
     testimonials = Testimonial.objects.all()
 
     if request.method == 'POST':

@@ -108,6 +108,7 @@ body {
     #nav-links  li  {
         border-top: 1px var(--brand-color-2) solid;
         padding: 10px;
+        min-height: 51px;
         width: 100%;
     }
 
@@ -119,6 +120,11 @@ body {
         background-color: var(--brand-color-1);
         color: var(--brand-color-3);
         cursor: pointer;
+    }
+
+    .active {
+        background-color: var(--brand-color-1);
+        color: white;
     }
 
     #navbar a:hover {
