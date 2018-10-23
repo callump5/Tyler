@@ -315,6 +315,15 @@ body {
         margin-bottom: 5px;
     }
 
+    .service-pointer {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+        width: auto;
+        margin: 5px;
+    }
     .sc-img-1 {
         width: 250px;
         height: 200px;
@@ -520,7 +529,7 @@ body {
         color: white;
     }
 
-    .service-imgs img:hover {
+    .sc-img:hover {
         position: absolute;
         top: 0;
         left: 0;
@@ -530,6 +539,10 @@ body {
         border: 10px solid white;
         cursor: pointer;
         z-index: 100;
+    }
+
+    .service-pointer {
+        display: block;
     }
 }
 

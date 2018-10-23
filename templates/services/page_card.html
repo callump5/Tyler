@@ -4,28 +4,29 @@
         <img src="{{ service.image_1.url }}"
 
              {% if service.image_2 and service.image_3 %}
-                class="sc-img-4"
+                class="sc-img sc-img-4"
              {% elif service.image_2 %}
-                class="sc-img-2"
+                class="sc-img sc-img-2"
              {% else %}
-                class="sc-img-1"
+                class="sc-img sc-img-1"
              {% endif %}
         >
 
         {% if service.image_2  %}
             <img src="{{ service.image_2.url }}"
                 {% if service.image_3 %}
-                     class="sc-img-3"
+                     class="sc-img sc-img-3"
                 {% else %}
-                     class="sc-img-2"
+                     class="sc-img sc-img-2"
                 {% endif %}
             >
         {% endif %}
 
 
         {% if service.image_3 %}
-            <img class="sc-img-3 img-3" src="{{ service.image_3.url }}">
+            <img class="sc-img sc-img-3 img-3" src="{{ service.image_3.url }}">
         {% endif %}
+        <img class="service-pointer" src="/static/icons/pointer.png">
 
     </div>
 
