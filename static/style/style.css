@@ -108,6 +108,7 @@ body {
     #nav-links  li  {
         border-top: 1px var(--brand-color-2) solid;
         padding: 10px;
+        margin: 0 10px;
         min-height: 51px;
         width: 100%;
     }
@@ -290,7 +291,7 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 246px;
+        min-width: 246px;
         height: 200px;
         background-color: white;
     }
@@ -330,12 +331,14 @@ body {
         width: 122px;
         height: 99px;
         margin-left: 2px;
-    }
-    .sc-img-3:last-child {
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: 0;
-        margin-top: 2px;
+    }
+
+    .img-3 {
+        bottom: 0;
+        top: unset;
     }
     .sc-img-4 {
         width: 122px;
@@ -500,11 +503,6 @@ body {
         flex-direction: row;
     }
 
-
-    .service-imgs {
-        width: 252px;
-    }
-
     .service-page-card {
         flex-direction: row;
         max-height: 200px;
@@ -513,7 +511,6 @@ body {
 
     .service-text {
         padding: 20px;
-        width: 75%;
     }
 
     .service-page-card:nth-child(2n) {
@@ -525,7 +522,5 @@ body {
 }
 
 @media screen and (min-width: 1500px) {
-    .service-imgs {
-        width: 246px;
-    }
+
 }
