@@ -1,15 +1,20 @@
+{% extends 'index.html' %}
 
 
-{% include 'header.html' %}
 
-{% include 'landing.html' %}
+{% block base %}
 
-{% include 'messages.html' %}
+    {% include 'header.html' %}
 
-{% include 'services.html' %}
+    {% include 'landing.html' %}
 
-{% include 'testimonials.html' %}
+    {% include 'messages.html' %}
 
-{% include 'call-form.html' %}
+    {% block content %}
 
-{% include 'footer.html' %}
+    {% endblock %}
+
+    {% include 'footer.html' %}
+
+
+{% endblock %}

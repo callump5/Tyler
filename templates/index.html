@@ -3,7 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tidy Building</title>
     <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/static/style/reset.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -18,7 +21,9 @@
 </head>
 <body>
 
-{% include 'base.html' %}
+{% block base %}
+
+{% endblock %}
 
 </body>
 </html>

@@ -11,8 +11,11 @@ from .forms import CallForm
 
 # Create your views here.
 
+
+
+# Home View
 def get_base(request):
-    services = Service.objects.all()[:3]
+    services = Service.objects.all()
     testimonials = Testimonial.objects.all()
 
     if request.method == 'POST':
@@ -32,4 +35,18 @@ def get_base(request):
     args = {'services': services,
             'testimonials': testimonials,
             'form':form}
-    return render(request, 'index.html', args)
+    return render(request, 'home-page.html', args)
+
+
+
+
+# Services View
+def get_services(request):
+    services = Service.objects.all()
+    args = {'services': services}
+    return render(request, 'services/services_page.html', args)
+
+def get_service(request, service_id):
+    service = Service.objects.get(id=service_id)
+    args = {'service':service}
+    return render(request, 'services/services_page.html', args)
