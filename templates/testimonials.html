@@ -4,16 +4,20 @@
         <h1 class="page-title">Testimonials</h1>
         {% for testimonial in testimonials %}
 
-            <div class="testimonial">
-                <div class="testi-text">
-                    <img src="{{ testimonial.logo.url }}">
-                    {% if testimonial.client %}
-                        <h1>{{ testimonial.client }}</h1>
-                    {% endif %}
-                    <h2>{{ testimonial.name }}</h2>
-                    <p>{{ testimonial.title }}</p>
+            <div class="testimonial-banner">
+
+                <div class="testimonial">
+                    <div class="testi-text">
+                        <img src="{{ testimonial.logo.url }}">
+                        {% if testimonial.client %}
+                            <h1>{{ testimonial.client }}</h1>
+                        {% endif %}
+                        <h2>{{ testimonial.name }}</h2>
+                        <p>{{ testimonial.title }}</p>
+                    </div>
+                    <p>{{ testimonial.testimonial }}</p>
                 </div>
-                <p>{{ testimonial.testimonial }}</p>
+                <img class="banner" src="/static/images/banner.png">
             </div>
         {% endfor %}
     </div>

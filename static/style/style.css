@@ -1,7 +1,19 @@
+/* Root Variables */
+
+ :root {
+     --brand-color-4: #00d14d;
+     --brand-color-5: #d17a00;
+     --brand-color-1: #0086d1;
+     --brand-color-2: #6e6e6e;
+     --brand-color-3: white;
+ }
+
+
 /* Fonts */
 
 
     /*
+
 
 
     font-family: 'Roboto', sans-serif;
@@ -14,7 +26,7 @@
     h1, h2, p, a, label, input, .alert, option, select {
         font-family: 'Niramit', sans-serif;
         font-size: 1.5em;
-        color: #4e555b;
+        color: var(--brand-color-2);
     }
 
 
@@ -22,6 +34,8 @@
 
 /* Index */
 
+body {
+}
 
 
     .my-flex-row {
@@ -48,41 +62,71 @@
         background-color: rgba(210, 210, 210, 0.51);
     }
 
+
+    .background-blue{
+        background-color: rgba(0, 134, 209, 0.82);
+    }
+
     .blend {
-        background-color: rgba(64, 64, 64, 0.51);
+        background-color: rgba(86, 94, 101, 0.62);
         background-blend-mode: multiply;
     }
 
 
 /* Nav */
 
+#nav-body {
+    align-items: center;
+}
 
     #navbar {
         padding: 10px;
+        font-weight: bolder;
+        font-size: 1.2em;
+    }
+    #navbar h1 {
+        color: var(--brand-color-1);
+    }
+    #navbar a {
+        color: var(--brand-color-2);
     }
 
     .my-nav-flex {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .nav-links {
+    #nav-links {
         display: none;
         text-align: center;
-        border-top: 3px solid black;
+        border-top: 3px solid var(--brand-color-2);
         margin-top: 5px;
     }
 
-    .nav-links  li {
-        border-top: 1px black solid;
+    #nav-links  li  {
+        border-top: 1px var(--brand-color-2) solid;
         padding: 10px;
+        width: 100%;
     }
 
-    .nav-links > li:first-child{
+    #nav-links > li:first-child{
         border-top: none;
     }
+
+    #nav-links li:hover {
+        background-color: var(--brand-color-1);
+        color: var(--brand-color-3);
+        cursor: pointer;
+    }
+
+    #navbar a:hover {
+
+        text-decoration: none;
+        color: var(--brand-color-3) !important;
+    }
+
 
     #nav-toggle {
         height: 50px;
@@ -148,17 +192,19 @@
     #jumbo-buttons {
         justify-content: flex-start;
         align-items: flex-start;
-        margin: 25px 0;
+        margin: 15px 0;
+
     }
 
     #jumbo-buttons a {
         padding: 10px;
-        border: 3px solid white;;
-        border-radius: 5px;
+        border: 3px solid var(--brand-color-1);
+        background-color: var(--brand-color-1);
+
     }
 
     #jumbo-buttons a:hover {
-        background-color: rgba(157, 156, 164, 0.46);
+        border-color: white;
         cursor: pointer;
     }
     .jumbotron h1, .jumbotron p {
@@ -183,40 +229,51 @@
 
     .service-card {
         width: 300px;
+        min-height: 500px;
         margin-bottom: 20px;
+        border-radius: 5px;
     }
     .service-card:last-child {
         margin-bottom: 0;
     }
-    .service-card h2, .service-card, p {
-        color: #4e555b;
+    .service-card h2, .service-card p {
+        color: white;
     }
 
     .service-card img {
         width: 300px;
         height: 200px;
         margin-bottom: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
     .service-card h2{
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         text-align: center;
     }
     .service-card p {
+        padding: 0 15px 10px 15px;
         text-align: justify;
     }
 
 
 /* Testimonials */
+
+    .testimonial-banner  img {
+        margin: 20px 0;
+        height: 40px;
+        width: 100%;
+
+    }
     .testimonial {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        margin-bottom: 40px;
     }
-    div.testimonial:last-child {
-        margin-bottom: 0;
+    div.testimonial-banner:last-child .banner {
+        display: none;
     }
 
     .testimonial img {
@@ -225,7 +282,6 @@
     }
     .testi-text{
         font-size: 12px;
-        margin-bottom: 25px;
         text-align: justify;
         float: left;
     }
@@ -295,7 +351,7 @@
         bottom: 15px;
         padding: 10px 25px;
         margin-left:10px;
-        background-color: #386fa4;
+        background-color: var(--brand-color-1);
         border: none;
         color: white;
     }
@@ -307,7 +363,6 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-bottom: 30px;
     }
     .testi-text {
         margin-right: 20px;
@@ -318,17 +373,29 @@
 
 @media screen and (min-width: 1000px){
 
+    #navbar {
+        padding: 25px
+    }
+    #nav-header {
+        margin-right: 75px;
+    }
+    .my-nav-flex {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
     #nav-body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    .nav-links {
+    #nav-links {
         display: flex;
         align-items: center;
         border-top:  none;
+        margin-top: 0;
     }
-    .nav-links li {
+    #nav-links li {
         border-top: none;
     }
     #nav-toggle {
@@ -343,5 +410,8 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
+    }
+    .my-nav-flex {
+        flex-direction: row;
     }
 }

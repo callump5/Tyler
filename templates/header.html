@@ -4,20 +4,21 @@
             <h1>Tidy Building Solutions</h1>
             <img id="nav-toggle" src="/static/icons/if_Menu2_1031510.png">
         </div>
-        <ul class="nav-links my-nav-flex">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact</a></li>
-            <div id="nav-contact">
-                <ul>
-                    <li><a class="social-link" href="#"><img class="nav-icon" src="/static/icons/envelope.png">tidybuildingsolutionsltd@gmail.com</a></li>
-                    <li><a class="social-link" href="#"><img class="nav-icon" src="/static/icons/phone-call.png">01702 300031</a></li>
-                    <li><a class="social-link" href="#"><img class="nav-icon" src="/static/icons/phone-call.png">07555662525</a></li>
-                </ul>
-            </div>
-        </ul>
+
+        <div id="nav-links">
+            <ul class="my-nav-flex">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul id="nav-contact">
+                <li><a class="social-link" href="mailto:tidybuildingsolutionsltd@gmail.com"><img class="nav-icon" src="/static/icons/envelope.png">Email Me!</a></li>
+                <li><a class="social-link" href=""><img class="nav-icon" src="/static/icons/phone-call.png">01702 300031</a></li>
+                <li><a class="social-link" href="#"><img class="nav-icon" src="/static/icons/phone-call.png">07555662525</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 
@@ -25,8 +26,20 @@
 
     <script>
         $('#nav-toggle').on('click', function () {
-            $('.nav-links').toggle('fast')
-        })
+            $('#nav-links').toggle('fast');
+        });
+
+        $('#nav-links li').mouseover(function () {
+            $(this).find('a').css('color', 'white');
+
+        }).mouseout(function () {
+            $(this).find('a').css('color', '#6e6e6e');
+        });
+
+        $('#nav-links .my-nav-flex').on('click', function () {
+            location.href = $(this).attr('href')
+        });
+
     </script>
 
 
