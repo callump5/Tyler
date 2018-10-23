@@ -233,6 +233,7 @@ body {
         min-height: 500px;
         margin-bottom: 20px;
         border-radius: 5px;
+        background-color: var(--brand-color-1);
     }
     .service-card:last-child {
         margin-bottom: 0;
@@ -382,7 +383,7 @@ body {
     #callform-submit {
         width: 100%;
         padding: 10px 25px;
-        background-color: #386fa4;
+        background-color: var(--brand-color-1);
         border: none;
         color: white;
     }
