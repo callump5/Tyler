@@ -2,7 +2,7 @@
 
  :root {
      --brand-color-4: #00d14d;
-     --brand-color-5: #d17a00;
+     --brand-color-5: rgb(193, 193, 193);
      --brand-color-1: #0086d1;
      --brand-color-2: #6e6e6e;
      --brand-color-3: white;
@@ -119,19 +119,20 @@ body {
 
     #nav-links li:hover {
         background-color: var(--brand-color-1);
-        color: var(--brand-color-3);
         cursor: pointer;
     }
 
     .active {
         background-color: var(--brand-color-1);
+    }
+    .active a {
         color: white;
     }
 
     #navbar a:hover {
 
         text-decoration: none;
-        color: var(--brand-color-3) !important;
+        color: var(--brand-color-3);
     }
 
     #nav-toggle {
@@ -239,22 +240,16 @@ body {
         width: 300px;
         min-height: 500px;
         margin-bottom: 20px;
-        border-radius: 5px;
-        background-color: var(--brand-color-1);
+        border-bottom: 3px solid var(--brand-color-1);
+        border-right: 3px solid var(--brand-color-1);
     }
     .service-card:last-child {
         margin-bottom: 0;
     }
-    .service-card h2, .service-card p {
-        color: white;
-    }
-
     .service-card img {
         width: 300px;
         height: 200px;
         margin-bottom: 15px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
     }
     .service-card h2{
         font-weight: bold;
@@ -282,7 +277,8 @@ body {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
-        border-radius: 10px;
+        padding-bottom: 3px;
+        border-bottom: 3px solid var(--brand-color-1);
     }
 
 
@@ -305,9 +301,9 @@ body {
     }
 
     .service-text h1 {
-    padding-left: 0;
-    font-size: 1.4em;
-}
+        padding-left: 0;
+        font-size: 1.4em;
+    }
 
     .service-text h1 {
         font-size: 2em;
@@ -361,7 +357,7 @@ body {
 
     .testimonial-banner  img {
         margin: 20px 0;
-        height: 40px;
+        height: 25px;
         width: 100%;
 
     }
@@ -515,7 +511,7 @@ body {
 
     .service-page-card {
         flex-direction: row;
-        max-height: 200px;
+        max-height: 210px;
         width: unset;
     }
 
@@ -523,12 +519,6 @@ body {
         padding: 20px;
     }
 
-    .service-page-card:nth-child(2n) {
-        background-color: #0086d1;
-    }
-    .service-page-card:nth-child(2n) p, .service-page-card:nth-child(2n) h1  {
-        color: white;
-    }
 
     .sc-img:hover {
         position: absolute;
